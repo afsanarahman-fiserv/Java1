@@ -92,7 +92,12 @@ public class JavaOne {
     }
 
     public void ex6() {
-        System.out.println("Student 1: ex6.");
+        int sum = 0;
+        System.out.print("Enter first number: ");
+        sum += console.nextInt();
+        System.out.print("Enter second number: ");
+        sum += console.nextInt();
+        System.out.println("Result: " + sum);
     }
 
     public void ex7() {
