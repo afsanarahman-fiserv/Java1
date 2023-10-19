@@ -101,7 +101,29 @@ public class JavaOne {
     }
 
     public void ex7() {
-        System.out.println("Student 1: ex7.");
+        System.out.print("Enter first number: ");
+        int first = console.nextInt();
+        System.out.print("Enter second number: ");
+        int second = console.nextInt();
+        System.out.print("Enter operation (add, sub, mul, div): ");
+        String command = console.next();
+        System.out.print("Result: ");
+        switch (command) {
+            case "add":
+                System.out.print(first + second);
+                break;
+            case "sub":
+                System.out.print(first - second);
+                break;
+            case "mul":
+                System.out.print(first * second);
+                break;
+            case "div":
+                System.out.print(first / second);
+                break;
+            default:
+                System.out.println("Invalid command entered.");
+        }
     }
 
     public void ex8() {
