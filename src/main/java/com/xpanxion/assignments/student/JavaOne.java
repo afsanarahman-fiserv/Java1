@@ -57,7 +57,38 @@ public class JavaOne {
     }
 
     public void ex5() {
-        System.out.println("Student 1: ex5.");
+        String input = "";
+        do {
+            System.out.print("Enter a string: ");
+            input = console.nextLine();
+            if(input.equals("quit")) break;
+
+            int vowels = 0;
+            int consonants = 0;
+            for(int i = 0; i < input.length(); i++) {
+                if(Character.isLetter(input.charAt(i))) {
+                    switch(input.charAt(i)) {
+                        case 'a':
+                        case 'e':
+                        case 'i':
+                        case 'o':
+                        case 'u':
+                        case 'A':
+                        case 'E':
+                        case 'I':
+                        case 'O':
+                        case 'U':
+                            vowels++;
+                            break;
+                        default:
+                            consonants++;
+                    }
+                }
+            }
+
+            System.out.println("Number of vowels: " + vowels);
+            System.out.println("Number of consonants: " + consonants);
+        } while(!input.equals("quit"));
     }
 
     public void ex6() {
