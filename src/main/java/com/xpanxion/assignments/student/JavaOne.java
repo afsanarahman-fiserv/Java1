@@ -43,7 +43,17 @@ public class JavaOne {
     }
 
     public void ex4() {
-        System.out.println("Student 1: ex4.");
+        System.out.print("Enter string: ");
+        String input = console.nextLine();
+        boolean palindrome = true;
+        for (int i = 0; i < input.length(); i++) {
+            if(input.charAt(i) != input.charAt(input.length()-i-1)) {
+                palindrome = false;
+            }
+        }
+
+        if(palindrome) System.out.println("YES");
+        else System.out.println("NO");
     }
 
     public void ex5() {
