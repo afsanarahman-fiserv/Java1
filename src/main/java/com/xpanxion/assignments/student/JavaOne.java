@@ -31,7 +31,15 @@ public class JavaOne {
     }
 
     public void ex3() {
-        System.out.println("Student 1: ex3.");
+        System.out.print("Enter a string: ");
+        String input = console.nextLine();
+        String[] tokens = input.split(" ");
+        String caps = "";
+        for(int i = 0; i < tokens.length; i++) {
+            if(i % 2 == 0) caps += tokens[i].toUpperCase() + " ";
+            else caps += tokens[i] + " ";
+        }
+        System.out.println(caps);
     }
 
     public void ex4() {
