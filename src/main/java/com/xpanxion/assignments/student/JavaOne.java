@@ -148,7 +148,15 @@ public class JavaOne {
     }
 
     public void ex9() {
-        System.out.println("Student 1: ex9.");
+        int target = (int)(Math.random() * 5) + 1;
+        int guess = -1;
+        while(guess != target) {
+            System.out.print("Enter a number: ");
+            guess = console.nextInt();
+
+            if(guess == target) System.out.println("You guessed it!!!");
+            else System.out.println("Try again...");
+        }
     }
 
     public void ex10() {
