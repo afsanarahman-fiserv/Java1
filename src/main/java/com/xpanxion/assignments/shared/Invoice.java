@@ -2,23 +2,15 @@ package com.xpanxion.assignments.shared;
 
 import java.util.ArrayList;
 
-public class Invoice {
-    private int id;
+public class Invoice extends Base {
     private ArrayList<Product> list;
 
     public Invoice(int id) {
-        this.id = id;
+        super(id);
         list = new ArrayList<Product>();
-    }
-
-    public int getId() {
-        return id;
     }
     public ArrayList<Product> getList() {
         return list;
-    }
-    public void setId(int id) {
-        this.id = id;
     }
 
     public void addProduct(Product product) {
