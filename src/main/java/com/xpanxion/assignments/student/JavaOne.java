@@ -127,7 +127,24 @@ public class JavaOne {
     }
 
     public void ex8() {
-        System.out.println("Student 1: ex8.");
+        System.out.print("Enter price per square feet: ");
+        double price = console.nextDouble();
+        console.nextLine();
+        String input = "";
+        int total = 0;
+        while(!input.equals("done")) {
+            System.out.print("Enter room dimensions (width x height): ");
+            input = console.nextLine();
+
+            if(input.equals("done")) break;
+            else {
+                String[] tokens = input.split(" ");
+                int width = Integer.parseInt(tokens[0]);
+                int height = Integer.parseInt(tokens[2]);
+                total += width * height * price;
+            }
+        }
+        System.out.println("Total cost: $" + total);
     }
 
     public void ex9() {
