@@ -160,7 +160,16 @@ public class JavaOne {
     }
 
     public void ex10() {
-        System.out.println("Student 1: ex10.");
+        System.out.print("Enter a string: ");
+        String input = console.nextLine();
+        String[] tokens = input.split(" ");
+        for(String token : tokens) {
+            String spaces = "";
+            for (int i = 0; i < token.length(); i++) {
+                System.out.println(spaces + token.charAt(i));
+                spaces += " ";
+            }
+        }
     }
 
     //
