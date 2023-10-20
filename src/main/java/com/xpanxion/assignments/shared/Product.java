@@ -1,19 +1,15 @@
 package com.xpanxion.assignments.shared;
 
-public class Product {
-    private int id;
+public class Product extends Base{
     private String name;
     private double price;
 
     public Product(int id, String name, double price) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.price = price;
     }
 
-    public int getId() {
-        return id;
-    }
     public String getName() {
         return name;
     }
@@ -21,9 +17,6 @@ public class Product {
         return price;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
     public void setName(String name) {
         this.name = name;
     }
