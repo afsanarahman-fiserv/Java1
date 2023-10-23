@@ -5,6 +5,7 @@ import com.xpanxion.assignments.student.JavaOne;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Main {
@@ -22,7 +23,8 @@ public class Main {
 //        javaOne.ex10();
 
         Scanner console = new Scanner(System.in);
-        ArrayList<Person> personList = new ArrayList<Person>();
+        // ArrayList<Person> personList = new ArrayList<Person>();
+        HashMap<Integer, Person> personList = new HashMap<Integer, Person>();
         String input = "";
         while(!input.equals("done")) {
             System.out.print("Enter person: ");
@@ -30,13 +32,26 @@ public class Main {
             if(!input.equals("done")) {
                 String[] tokens = input.split(" ");
                 int id = Integer.parseInt(tokens[0].substring(0, tokens[0].length()-1));
-                personList.add(new Person(id, tokens[1], tokens[2]));
+                // personList.add(new Person(id, tokens[1], tokens[2]));
+                personList.put(id, new Person(id, tokens[1], tokens[2]));
             }
         }
 
-        for(Person person : personList) {
-            System.out.println(person.toString());
+        input = "";
+        while(!input.equals("done")) {
+            System.out.print("Enter Person ID: ");
+            input = console.nextLine();
+            if(!input.equals("done")) {
+                int id = Integer.parseInt(input);
+                Person person = personList.get(id);
+                System.out.println(person.toString());
+            }
         }
+
+
+//        for(Person person : personList) {
+//            System.out.println(person.toString());
+//        }
 
 //        Invoice invoice =  new Invoice(1);
 //        invoice.addProduct(new Product(111,"Mustard", 2.00));
