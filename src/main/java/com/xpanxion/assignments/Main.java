@@ -73,12 +73,8 @@ public class Main {
                 new Person(3, "Adam", "Anderson")
         );
 
-        for(Person p : personList) {
-            p.setLastName("xxx");
-        }
-        for(Person p : personList) {
-            System.out.println(p);
-        }
+        personList.stream().map(person -> new Person(person.getId(), person.getFirstName(), "xxx")).forEach(System.out::println);
+
 
 //        var filteredList = new ArrayList<Person>();
 //        for(Person p : personList) {
