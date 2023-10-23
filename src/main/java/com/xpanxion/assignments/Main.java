@@ -1,8 +1,6 @@
 package com.xpanxion.assignments;
 
-import com.xpanxion.assignments.shared.Calculator;
-import com.xpanxion.assignments.shared.Invoice;
-import com.xpanxion.assignments.shared.Product;
+import com.xpanxion.assignments.shared.*;
 import com.xpanxion.assignments.student.JavaOne;
 
 import java.text.NumberFormat;
@@ -29,8 +27,19 @@ public class Main {
 //        NumberFormat formatter = NumberFormat.getCurrencyInstance();
 //        System.out.println("Total cost: " + formatter.format(invoice.getTotalCost()));
 
-        Scanner console = new Scanner(System.in);
-        Calculator calculator = new Calculator();
-        calculator.calculate(console);
+//        Scanner console = new Scanner(System.in);
+//        Calculator calculator = new Calculator();
+//        calculator.calculate(console);
+
+        CatQueue q = new CatQueue();
+        q.enqueue(new Cat("Alice"));
+        q.enqueue(new Cat("Bob"));
+        q.enqueue(new Cat("Charlie"));
+        q.enqueue(new Cat("Dan"));
+        while(!q.isEmpty()) {
+            q.printQueue();
+            q.dequeue();
+            Thread.sleep(3000);
+        }
     }
 }
