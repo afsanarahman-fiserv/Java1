@@ -23,6 +23,18 @@ public class Person {
         return lastName;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setFirstName(String name) {
+        firstName = name;
+    }
+
+    public void setLastName(String name) {
+        lastName = name;
+    }
+
     public String toString() {
         return "Person{id=" + id + ", firstName='" + firstName + "', lastName='" + lastName + "'}";
     }

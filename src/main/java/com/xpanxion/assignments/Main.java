@@ -72,13 +72,21 @@ public class Main {
                 new Person(2, "Zoey", "Smith"),
                 new Person(3, "Adam", "Anderson")
         );
-        var filteredList = new ArrayList<Person>();
+
         for(Person p : personList) {
-            if(p.getLastName().equals("Smith")) filteredList.add(p);
+            p.setLastName("xxx");
         }
-        for (Person p : filteredList) {
+        for(Person p : personList) {
             System.out.println(p);
         }
+
+//        var filteredList = new ArrayList<Person>();
+//        for(Person p : personList) {
+//            if(p.getLastName().equals("Smith")) filteredList.add(p);
+//        }
+//        for (Person p : filteredList) {
+//            System.out.println(p);
+//        }
 
 //        CatQueue q = new CatQueue();
 //        q.enqueue(new Cat("Alice"));
