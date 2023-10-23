@@ -5,6 +5,7 @@ import com.xpanxion.assignments.student.JavaOne;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -59,12 +60,25 @@ public class Main {
 //        NumberFormat formatter = NumberFormat.getCurrencyInstance();
 //        System.out.println("Total cost: " + formatter.format(invoice.getTotalCost()));
 
-        var repository = new Repository();
-        var p = repository.getPerson();
-        System.out.println(p);
+//        var repository = new Repository();
+//        var p = repository.getPerson();
+//        System.out.println(p);
 
 //        Calculator calculator = new Calculator();
 //        calculator.calculate(console);
+
+        var personList = Arrays.asList(
+                new Person(1, "Charlie", "Jones"),
+                new Person(2, "Zoey", "Smith"),
+                new Person(3, "Adam", "Anderson")
+        );
+        var filteredList = new ArrayList<Person>();
+        for(Person p : personList) {
+            if(p.getLastName().equals("Smith")) filteredList.add(p);
+        }
+        for (Person p : filteredList) {
+            System.out.println(p);
+        }
 
 //        CatQueue q = new CatQueue();
 //        q.enqueue(new Cat("Alice"));
